@@ -1,0 +1,187 @@
+@import "./../../styles/vars";
+
+%style {
+    font-family: $rufo;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+.section-header {
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    &-wrapper {
+        background-image: url("../../images/header/background-customer.svg");
+        background-size: cover;
+        background-position: center bottom;
+
+        @media (min-width: 768px) {
+            padding: 27px 0 28px;
+        }
+
+        @media (min-width: 1366px) {
+            padding: 95px 0 54px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        position: relative;
+        z-index: 9;
+        padding-top: 260px;
+
+        @media (min-width: 768px) {
+            max-width: 412px;
+            padding-top: 0;
+        }
+
+        @media(min-width: 768px) and (max-width: 1365px) {
+            padding-right: 30px;
+            padding-left: 6px;
+        }
+
+        @media (min-width: 1366px) {
+            max-width: 650px;
+            margin-left: -5px;
+        }
+
+        &-image {
+            @media(min-width: 1366px) {
+                margin-top: calc((27px - 160px));
+                padding-bottom: 10px;
+            }
+
+            .Image {
+                @media(min-width: 768px) and (max-width: 1365px) {
+                    padding-top: 5px;
+                    margin-bottom: 23px;
+                    margin-left: -6%;
+                }
+
+                @media(min-width: 1366px) {
+                    margin-left: -100%;
+                    padding-left: 340px;
+                }
+
+                img {
+                    @media(min-width: 1366px) {
+                        width: auto;
+                    }
+                }
+
+            }
+        }
+
+        &-advantage {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 20px;
+
+            &>* {
+                flex-shrink: 0;
+            }
+
+            @media (min-width: 768px) {
+                column-gap: 30px;
+            }
+
+            @media (min-width: 1366px) {
+                column-gap: 55px;
+            }
+        }
+
+        &--sm {
+            height: 255px;
+
+            &__content {
+                display: block;
+
+                @media (min-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 66px;
+        font-weight: 400;
+
+        @media (min-width: 768px) {
+            // padding-right: 45px; 
+            margin-bottom: 111px;
+        }
+
+        @media(min-width: 768px) and (max-width: 1365px) {
+            padding-right: 34px;
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 1366px) {
+            margin-bottom: 160px;
+        }
+    }
+
+    &--md {
+        display: none;
+
+        @media(min-width: 768px) {
+            display: block;
+        }
+    }
+
+    &--sm {
+        display: block;
+
+        @media(min-width: 768px) {
+            display: none;
+        }
+    }
+}
+
+.advantage {
+    &__title {
+        @extend %style;
+        font-size: 18px;
+
+        @media(min-width: 768px) {
+            font-size: 24px;
+        }
+
+        @media(min-width: 1366px) {
+            font-size: 48px;
+        }
+
+    }
+
+    &__text {
+        @extend %style;
+        font-size: 14px;
+
+        @media(min-width: 768px) {
+            font-size: 18px;
+        }
+
+        @media(min-width: 1366px) {
+            font-size: 24px;
+        }
+    }
+
+    &__wrap {
+        &>*+* {
+            margin-top: 10px;
+
+            @media(min-width: 768px) {
+                margin-top: 6px;
+            }
+
+            @media(min-width: 1366px) {
+                margin-top: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+.ArrowOpacity {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -50px;
+    transition: 0.4s ease-in-out;
+    height: 119px;
+    background: linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0.63) 100%);
+
+    @media(min-width: 768px) and (max-width: 1365px){
+        bottom: -40px;
+    }
+
+    &__button {
+        background: transparent;
+        border: none;transform: rotate(180deg);
+        outline: none;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 2px solid #8D8B8B;
+            display: block;
+            width: 193px;
+
+            @media(min-width: 1366px){
+                width: 200px;
+            }
+        }
+
+        &::before {
+            left: -(calc(110px + 20px));
+            @media(min-width: 768px){
+                left: -(calc(200px + 40px));
+            }
+        }
+
+        &::after {
+            right: -(calc(110px + 20px));
+            @media(min-width: 768px){
+                right: -(calc(200px + 40px));
+            }
+        }
+    }
+
+    img {
+        transition: .3s linear;
+        &.deg{
+            transform: rotate(180deg);
+        }
+    }
+
+    &.hidden {
+        height: 50px;
+        bottom: -100px;
+        transition: 0.4s linear;
+    }
+}

@@ -1,0 +1,44 @@
+@import "./../../styles/vars";
+
+.Container {
+
+    margin: 0 auto;
+    padding: 0 $container-padding;
+    width: $container-mobile;
+
+    @media(min-width: 768px) {
+        width: $container-table;
+    }
+
+    @media(min-width: 1366px) {
+        width: $container-width;
+    }
+
+    &-left {
+        width: auto;
+        padding-right: 0;
+        padding-left: calc((100% - $container-mobile)/2 + 15px);
+
+        @media(min-width: 768px) {
+            padding-left: calc((100% - $container-table)/2 + 15px);
+        }
+
+        @media(min-width: 1366px) {
+            padding-left: calc((100% - $container-width)/2 + 15px);
+        }
+    }
+
+    &-right {
+        width: auto;
+        padding-left: 0;
+        padding-right: calc((100% - $container-mobile)/2 + 15px);
+
+        @media(min-width: 768px) {
+            padding-right: calc((100% - $container-table)/2 + 15px);
+        }
+
+        @media(min-width: 1366px) {
+            padding-right: calc((100% - $container-width)/2 + 15px);
+        }
+    }
+}

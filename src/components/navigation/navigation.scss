@@ -1,0 +1,193 @@
+@import "./../../styles/vars";
+
+%item {
+    border: none;
+    outline: none;
+    display: inline-block;
+    background: transparent;
+}
+
+%fg {
+    display: flex;
+
+    @media(min-width: 320px) {
+        column-gap: 10px;
+    }
+
+    @media(min-width: 768px) {
+        column-gap: 20px;
+    }
+}
+
+.Nav {
+    background: $black-2;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    padding: 7px 0 4px;
+
+    &igation {
+        &__row {
+            display: flex;
+            justify-content: space-between;
+
+            .logo {
+                width: 72px;
+
+                img {
+                    transform: scale(0.9);
+                }
+            }
+        }
+
+        &__left,
+        &__right,
+        &__link-wrapper {
+            display: flex;
+            align-items: center;
+            column-gap: 11px;
+
+            @media(min-width: 1366px) {
+                column-gap: 5px;
+            }
+        }
+
+        &__right {
+
+            @media(min-width: 320px) {
+                column-gap: 12px;
+            }
+
+            @media(min-width: 768px) {
+                column-gap: 32px;
+            }
+
+            @media(min-width: 1366px) {
+                column-gap: 71px;
+            }
+        }
+
+        &__link {
+            font-family: $rufo;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            line-height: 40px;
+            color: #02E502;
+            text-decoration: none;
+
+            &-wrapper {
+                column-gap: 2px !important;
+                cursor: pointer;
+
+                @media(min-width: 1366px) {
+                    padding-bottom: 6px;
+                }
+            }
+
+            &-mobile {
+                display: none;
+
+                @media(min-width: 768px) {
+                    display: inline-block;
+                }
+            }
+        }
+
+        &__social {
+            display: flex;
+            column-gap: 7px;
+
+            @media(min-width: 768px) {
+                column-gap: 20px;
+                padding-bottom: 2px;
+            }
+
+            @media(min-width: 768px) and (max-width: 1365px) {
+                padding-bottom: 4px;
+            }
+
+            @media(min-width: 1366px) {
+                column-gap: 22px;
+                padding-right: 12px;
+            }
+
+            &-item {
+                min-width: 20px;
+                min-height: 20px;
+
+                @media(min-width: 768px) and (max-width: 1365px) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+
+        &__lang {
+            @extend %fg;
+
+            @media(max-width: 767px) {
+                column-gap: 7px !important;
+            }
+
+            @media(min-width: 768px) and (max-width: 1365px) {
+                padding-right: 7px;
+            }
+
+            &-item {
+                @extend %item;
+                font-family: $rufo;
+                font-style: normal;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $white;
+                font-size: 14px;
+                line-height: 17px;
+
+                @media(min-width: 768px) {
+                    column-gap: 20px;
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+        }
+
+        &__option {
+            @extend %fg;
+
+            @media(min-width: 768px) and (max-width: 1365px) {
+                padding-bottom: 8px;
+            }
+
+            &-item {
+                @extend %item;
+                min-width: 20px;
+                min-height: 20px;
+
+                @media(min-width: 768px) and (max-width: 1365px) {
+                    width: 30px;
+
+                }
+
+                .NavbarMenu {
+                    cursor: default;
+                }
+
+                &--mobile {
+                    display: inline-block;
+
+                    @media(min-width: 768px) {
+                        display: none;
+                    }
+                }
+            }
+
+            &-menu {
+                position: relative;
+            }
+        }
+
+    }
+}

@@ -1,0 +1,22 @@
+button,
+input,
+textarea,
+label {
+    display: inline-block;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+body {
+    background: #181818;
+}
+
+.root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & > * {
+        flex-shrink: 0;
+    }
+}

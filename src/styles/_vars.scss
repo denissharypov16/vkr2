@@ -1,0 +1,20 @@
+@import "./../fonts/index.scss";
+
+$black-1: #181818;
+$black-2: #151515;
+$black-3: #1E1D1D;
+$green-1: #02E602;
+$white: #fff;
+
+// Container
+
+$container-padding: 15px;
+$container-width: (
+    1306px + ($container-padding * 2)
+);
+$container-table: (
+    708px + ($container-padding * 2)
+);
+$container-mobile: (
+    290px + ($container-padding * 2)
+);

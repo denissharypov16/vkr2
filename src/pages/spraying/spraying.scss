@@ -1,0 +1,163 @@
+@import "./../../styles/vars";
+
+.Spraying {
+    color: $white;
+
+    .header__content--sm__content {
+        margin-top: -35px;
+        padding-bottom: 30px;
+
+        .paragraph-title {
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+
+    .header__title {
+        width: 267px;
+        font-size: 28px;
+        line-height: 34px;
+        margin-bottom: 20px;
+
+        @media(min-width: 768px) {
+            width: auto;
+            margin-bottom: 25px;
+            font-size: 30px;
+            line-height: 36px;
+            padding-right: 0;
+        }
+
+        @media(min-width: 1366px) {
+            margin-bottom: 88px;
+            font-size: 72px;
+            line-height: 86px;
+        }
+    }
+
+    .header__content {
+        @media(min-width: 768px) {
+            width: 323px;
+        }
+
+        @media(min-width: 1366px) {
+            width: 564px;
+        }
+
+        .paragraph-title {
+            font-size: 16px;
+            line-height: 27px;
+
+            @media(min-width: 768px) {
+                font-size: 18px;
+                line-height: 31px;
+            }
+
+            @media(min-width: 1366px) {
+                font-size: 24px;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .header-wrapper {
+        @media(min-width: 768px) {
+            padding: 68px 0 73px;
+        }
+
+        @media(min-width: 1366px) {
+            padding: 205px 0 103px;
+        }
+    }
+}
+
+.Params {
+    @media(min-width: 768px) {
+        padding: 40px 0 30px;
+    }
+}
+
+.About-service {
+    &__text {
+        position: relative;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 27px;
+        color: $white;
+        width: 270px;
+
+        @media(min-width: 768px) {
+            font-size: 18px;
+            line-height: 31px;
+            width: 670px;
+        }
+
+        @media(min-width: 1366px) {
+            width: 1032px;
+            font-size: 24px;
+            line-height: 40px;
+        }
+
+        .ArrowOpacity {
+            height: 70px;
+
+            @media (min-width: 768px) {
+                height: 94px;
+            }
+
+            @media(min-width: 1366px) {
+                height: 119px;
+            }
+
+            &.hidden {
+                @media(min-width: 1366px) {
+                    bottom: -110px;
+                }
+            }
+        }
+    }
+}
+
+.Advantage,
+.Flaws,
+.Work {
+    &__titles {
+        margin-bottom: 5px;
+
+        @media(min-width:768px) {
+            margin-bottom: 50px;
+        }
+
+        @media(min-width: 1365px) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 10px;
+
+        @media(min-width: 768px) {
+            column-gap: 20px;
+        }
+
+        &>* {
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+    }
+}
+
+.Work {
+    &__row {
+        background-position: center;
+        background-repeat: no-repeat;
+
+
+        @media(min-width: 1366px) {
+            column-gap: 137px;
+            background-image: url("./../../images/other/line-icon.svg");
+        }
+    }
+}

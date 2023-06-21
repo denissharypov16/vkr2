@@ -1,0 +1,22 @@
+@import "./../../styles/vars";
+
+.SectionDesc {
+    position: relative;
+    padding-top: 30px;
+
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 27px;
+    color: $white;
+
+    @media(min-width: 768px) {
+        padding-top: 44px;
+
+        font-size: 18px;
+        line-height: 31px;
+    }
+
+    @media(min-width: 1366px) {
+        padding-top: 60px;
+    }
+}
