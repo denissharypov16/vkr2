@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\busket",
+    "\\src\\components\\navigation",
+    "\\src\\components\\params",
+    "\\src\\pages",
+    "\\src\\pages\\about",
+    "\\src\\pages\\news",
+    "\\src\\pages\\products"
+  ],
+  "SelectedNode": "\\package.json",
+  "PreviewInSolutionExplorer": false
+}
